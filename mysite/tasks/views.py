@@ -21,3 +21,9 @@ class PostCreateView(generic.CreateView):
     fields = ['name', 'done']
     success_url = reverse_lazy('tasks')
 
+
+class PostUpdateView(generic.UpdateView):
+    model = Task
+    template_name = "task_form.html"
+    fields = ['name', 'done']
+    success_url = reverse_lazy('tasks')
