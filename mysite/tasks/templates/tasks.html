@@ -1,4 +1,4 @@
 <h1>Tasks:</h1>
 {% for task in tasks %}
-<p>{{ task.name }}</p>
+<p><a href="{{ task.pk }}">{{ task.name }}</a></p>
 {% endfor %}
