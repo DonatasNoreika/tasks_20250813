@@ -4,6 +4,7 @@
 <p>
     <a href="{{ task.pk }}">{{ task.name }}</a><br>
     <a href="{% url 'task_update' task.pk %}">Update</a>
+    <a href="{% url 'task_delete' task.pk %}">Delete</a>
     <hr>
 </p>
 {% endfor %}

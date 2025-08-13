@@ -27,3 +27,10 @@ class PostUpdateView(generic.UpdateView):
     template_name = "task_form.html"
     fields = ['name', 'done']
     success_url = reverse_lazy('tasks')
+
+
+class PostDeleteView(generic.DeleteView):
+    model = Task
+    template_name = "task_delete.html"
+    context_object_name = "task"
+    success_url = reverse_lazy('tasks')
